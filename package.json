@@ -1,0 +1,21 @@
+{
+  "name": "mailing-list",
+  "version": "1.0.0",
+  "description": "Mailing List Subscription App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Mailing"
+  ],
+  "author": "Blessing Tayedzerwa",
+  "license": "ISC",
+  "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.72",
+    "express": "^4.17.1"
+  },
+  "engines": {
+    "node": "16.x"
+  }
+}
