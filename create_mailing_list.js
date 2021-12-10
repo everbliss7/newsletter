@@ -1,9 +1,10 @@
 //jshint esversion: 6
 const mailchimp = require('@mailchimp/mailchimp_marketing');
+require('dotenv').config();
 
 mailchimp.setConfig({
-        apiKey:  '324d1c4c91263bb6fbcdd07f110f48d3-us17',
-        server: 'us17',
+        apiKey:  process.env.MAILCHIMP_API_KEY,
+        server: process.env.MAILCHIMP_SERVER,
 });
 
 const event = {
@@ -12,17 +13,17 @@ const event = {
 
 const footerContactInfo = {
         company: "Everbliss7 Inc.",
-        address1: "13 Connor Street",
+        address1: "Street",
         address2: "",
-        city: "Port Shepstone",
+        city: "City",
         state: "KZN",
-        zip: "4240",
+        zip: "",
         country: "South Africa",
 };
 
 const campaignDefaults = {
-        from_name: "Blessing Tayedzerwa",
-        from_email: "app.buid.dev@gmail.com",
+        from_name: process.env.FROM_NAME,
+        from_email: process.env.FROM_EMAIL,
         subject: "Welcome to Everbliss7",
         language: "EN_US",
 };
