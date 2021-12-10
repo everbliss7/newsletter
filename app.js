@@ -14,8 +14,8 @@ mailchimp.setConfig({
 
 //Add a subscriber to the Newsletter Mailing List
 async function addSubscriber(subscriber) {
-        const listId = process.env.MAILCHIMP_LIST_ID;
-        const response = await mailchimp.lists.addListMember(listId, {
+        // const listId = process.env.MAILCHIMP_LIST_ID;
+        const response = await mailchimp.lists.addListMember(process.env.MAILCHIMP_LIST_ID, {
                 email_address: subscriber.email,
                 status: 'subscribed',
                 merge_fields: {
